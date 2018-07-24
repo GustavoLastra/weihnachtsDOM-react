@@ -5,23 +5,15 @@ class LedRow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rowId: props.rowId,
-            leds: props.leds
+
         };
-        this.addLed = this.addLed.bind(this);
-    }
 
-    addLed(newLed) {
-        let tempArray = this.state.leds;
-        tempArray.push(newLed);
-        this.setState({leds: tempArray});
     }
-
     render() {
         return (
             <div style={styles.ledRow}>
                 {
-                    this.state.leds.map((led, index) => {
+                    this.props.leds.map((led, index) => {
                         return<Led
                             key={index}
                             parentId={led.parentId}

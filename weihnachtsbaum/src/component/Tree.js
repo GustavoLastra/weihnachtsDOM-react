@@ -4,12 +4,32 @@ import Tools from "./Tools.js"
 import TreeData from "../data.js"
 
 class Tree extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
-            ledRows: TreeData
+            ledRows: TreeData.ledRows,
         };
         this.addLedRow = this.addLedRow.bind(this);
+        this.onTurn = this.onTurn.bind(this);
+    }
+
+    onTurn(turn) {
+        console.log("Tree onTurn: " + turn);
+        let tempArray = this.state.ledRows;
+        if (turn === true){
+            tempArray.map(ledRow => {
+                ledRow.leds.map(led =>  led.buttonState = true)
+            })
+        }
+        else{
+            tempArray.map(ledRow => {
+                ledRow.leds.map(led => led.buttonState = false)
+            })
+
+        }
+        this.setState({ledRows: tempArray})
+
+        console.log("TREE tempArray: " + JSON.stringify(this.state.ledRows));
     }
 
     addLedRow(newLedRow) {
@@ -22,7 +42,9 @@ class Tree extends Component {
         return (
             <div style={styles.container}>
                 <div style={styles.toolsContainer}>
-                    <Tools/>
+                    <Tools
+                        onTurn={this.onTurn}
+                    />
                 </div>
 
 
@@ -32,7 +54,7 @@ class Tree extends Component {
                             return<LedRow
                                 key={index}
                                 rowId={index}
-                                leds={TreeData[index].leds}
+                                leds={ledRow.leds}
                                 addLedRow={this.addLedRow}
                             />
                         })

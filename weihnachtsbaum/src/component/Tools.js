@@ -5,14 +5,25 @@ class Tools extends Component {
         super(props);
         this.state = {
             value: "",
+            buttonName: "Turn On"
         };
-        this.onClick = this.onClick.bind(this);
+        this.onClickCreate = this.onClickCreate.bind(this);
+        this.onClickTurn = this.onClickTurn.bind(this);
         this.handleChange = this.handleChange.bind(this);
-
     }
 
-    onClick() {
+    onClickCreate() {
         this.setState({buttonState: !this.state.buttonState});
+    }
+
+    onClickTurn() {
+        this.state.buttonName==="Turn On"
+            ? (this.setState({buttonName: "Turn Off"}),
+                this.props.onTurn(true)
+            ):(
+                this.setState({buttonName: "Turn On"}),
+                    this.props.onTurn(false)
+            ) ;
     }
 
     handleChange(event) {
@@ -32,10 +43,10 @@ class Tools extends Component {
                     />
                 </div>
                 <div style={styles.toolItem}>
-                    <button style={styles.createButton}>Create Tree</button>
+                    <button style={styles.primaryButton}>Create Tree</button>
                 </div>
                 <div style={styles.toolItem}>
-                    <button style={styles.createButton}>Turn On</button>
+                    <button onClick={this.onClickTurn} style={this.state.buttonName==="Turn On"?styles.primaryButton:styles.dangerButton}>{this.state.buttonName}</button>
                 </div>
             </div>
         );
@@ -60,8 +71,8 @@ const styles = {
         padding: "15px 32px",
     },
 
-    createButton: {
-        backgroundColor: "#008CBA",
+    primaryButton: {
+        backgroundColor: "#007bff",
         boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
         color: "white",
         padding: "15px 32px",
@@ -72,7 +83,20 @@ const styles = {
         borderRadius: "50%",
         outline: "none"
 
-}
+    },
+    dangerButton: {
+        backgroundColor: "#dc3545",
+        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
+        color: "white",
+        padding: "15px 32px",
+        textAlign: "center",
+        textDecoration: "none",
+        fontSize: "16px",
+        cursor: "pointer",
+        borderRadius: "50%",
+        outline: "none"
+
+    },
 }
 
 export default Tools;

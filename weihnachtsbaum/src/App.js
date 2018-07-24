@@ -11,8 +11,3 @@ class App extends Component {
 }
 
 export default App;
-
-const styles = {
-
-
-}

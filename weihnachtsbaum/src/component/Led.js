@@ -4,20 +4,16 @@ class Led extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            parentId: props.parentId,
-            ownId: props.ownId,
-            buttonState: props.buttonState,
+
         };
         this.onClick = this.onClick.bind(this);
     }
 
-    onClick() {
-        this.setState({buttonState: !this.state.buttonState});
-    }
+    onClick() {}
 
     render() {
         return (
-            <button style={this.state.buttonState? styles.backgroundOn:styles.backgroundOff } >
+            <button style={this.props.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
 
             </button>
         );

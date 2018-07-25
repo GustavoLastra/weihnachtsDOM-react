@@ -14,11 +14,9 @@ class LedRow extends Component {
             <div style={styles.ledRow}>
                 {
                     this.props.leds.map((led, index) => {
-                        return<Led
+                        return <Led
                             key={index}
-                            parentId={led.parentId}
-                            ownId={led.ownId}
-                            buttonState={led.buttonState}
+                            led={led}
                         />
                     })
                 }

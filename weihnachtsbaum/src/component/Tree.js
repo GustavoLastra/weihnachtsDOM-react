@@ -9,12 +9,12 @@ class Tree extends Component {
         this.state = {
             ledRows: TreeData.ledRows,
         };
-        this.addLedRow = this.addLedRow.bind(this);
+        //this.addLedRow = this.addLedRow.bind(this);
         this.onTurn = this.onTurn.bind(this);
+        this.onCreate = this.onCreate.bind(this);
     }
 
     onTurn(turn) {
-        console.log("Tree onTurn: " + turn);
         let tempArray = this.state.ledRows;
         if (turn === true){
             tempArray.map(ledRow => {
@@ -28,15 +28,26 @@ class Tree extends Component {
 
         }
         this.setState({ledRows: tempArray})
-
-        console.log("TREE tempArray: " + JSON.stringify(this.state.ledRows));
     }
 
-    addLedRow(newLedRow) {
-        let tempArray = this.state.ledRows;
-        tempArray.push(newLedRow);
-        this.setState({ledRows: tempArray});
+    onCreate(levels) {
+        let newTree = {"ledRows": []};
+        var ledCounter;
+        var row;
+
+        for (row = 0, ledCounter = 1; row < levels; row++, ledCounter++ ) {    //ledCounter*=2
+            let newLeds = {"leds": []}
+            for (var i=0 ; i  < ledCounter ; i++ ) {
+                let newLed = { label: "div", parentId: 0, ownId: 0, buttonState : false };
+                newLeds.leds.push(newLed);
+            }
+            newTree.ledRows.push(newLeds);
+        }
+
+        this.setState({ledRows: newTree.ledRows})
+
     }
+
 
     render() {
         return (
@@ -44,6 +55,7 @@ class Tree extends Component {
                 <div style={styles.toolsContainer}>
                     <Tools
                         onTurn={this.onTurn}
+                        onCreate={this.onCreate}
                     />
                 </div>
 
@@ -72,12 +84,11 @@ class Tree extends Component {
 
 const styles = {
 
-
     container: {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-arround",
-        width:"80%",
+        width:"90%",
         margin: "auto"
     },
 

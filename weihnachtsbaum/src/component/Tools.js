@@ -13,7 +13,7 @@ class Tools extends Component {
     }
 
     onClickCreate() {
-        this.setState({buttonState: !this.state.buttonState});
+        this.props.onCreate(this.state.value);
     }
 
     onClickTurn() {
@@ -43,7 +43,7 @@ class Tools extends Component {
                     />
                 </div>
                 <div style={styles.toolItem}>
-                    <button style={styles.primaryButton}>Create Tree</button>
+                    <button onClick={this.onClickCreate} style={styles.primaryButton}>Create Tree</button>
                 </div>
                 <div style={styles.toolItem}>
                     <button onClick={this.onClickTurn} style={this.state.buttonName==="Turn On"?styles.primaryButton:styles.dangerButton}>{this.state.buttonName}</button>

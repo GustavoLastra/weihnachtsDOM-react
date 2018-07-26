@@ -28,7 +28,6 @@ class Tools extends Component {
 
     handleChange(event) {
         this.setState({value: event.target.value});
-        console.log("this.state.value: " + this.state.value);
     }
 
     render() {

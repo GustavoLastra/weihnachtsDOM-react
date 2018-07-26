@@ -10,7 +10,6 @@ class LedList extends Component {
     }
     render() {
         const { ledList } = this.props;
-        console.log("LEDLIST ledList: "+ JSON.stringify(ledList));
         return (
             <div style={styles.ledList}>
                 {

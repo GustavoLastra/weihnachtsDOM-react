@@ -8,12 +8,13 @@ class Tree extends Component {
         super();
         this.state = {
             ledList: InitialLedList,
-            numberOfLevels: 3,
+            numberOfLevels: 4,
         };
         //this.addLedRow = this.addLedRow.bind(this);
         this.onTurn = this.onTurn.bind(this);
         this.recursiveTurn = this.recursiveTurn.bind(this);
         this.onCreate = this.onCreate.bind(this);
+        this.recursiveCreate = this.recursiveCreate.bind(this);
     }
 
     recursiveTurn(turn, tempArray, seed) {
@@ -21,7 +22,7 @@ class Tree extends Component {
         console.log("recursiveTurn tempArray: " + JSON.stringify(tempArray))
 
         // TERMINATION
-        if (seed < 0) return;
+        if (seed < 1) return;
 
         // BASE
         tempArray.map(object => {
@@ -49,22 +50,41 @@ class Tree extends Component {
         this.setState({ledList: tempArray})
     }
 
-    onCreate(levels) {
-        let newTree = {ledList: []};
-        var ledCounter;
-        var row;
+    recursiveCreate(levels, actualLevel, newLed) {
+        console.log("actualLevel " + actualLevel);
+        //Termination
+        if (actualLevel === levels) return;
 
-        for (row = 0, ledCounter = 1; row < levels; row++, ledCounter++ ) {    //ledCounter*=2
-            let newLeds = {"leds": []}
-            for (var i=0 ; i  < ledCounter ; i++ ) {
-                let newLed = { label: "div", parentId: 0, ownId: 0, buttonState : false };
-                newLeds.leds.push(newLed);
-            }
-            newTree.ledRows.push(newLeds);
+        var led = {
+            label: "div",
+            buttonState: false,
+            ledList: []
+        };
+
+        if (actualLevel === 0) {
+
+            actualLevel++;
+            newLed.push(led);
+            return (this.recursiveCreate(levels, actualLevel, newLed[0].ledList));
+        } else if(actualLevel < levels){
+            actualLevel++;
+            newLed.push(led);
+            newLed.push(led);
+            return (this.recursiveCreate(levels, actualLevel, newLed[0].ledList));
+            return (this.recursiveCreate(levels, actualLevel, newLed[1].ledList));
         }
 
-        this.setState({ledRows: newTree.ledRows})
+    }
 
+
+
+    onCreate(levels) {
+
+        let newTree = [];
+        let actualLevel = 0;
+
+        this.recursiveCreate(levels, actualLevel, newTree);
+        this.setState({ledList: newTree})
     }
 
 

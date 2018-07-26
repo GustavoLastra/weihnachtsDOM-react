@@ -22,11 +22,11 @@ class Led extends Component {
         return (
             <div id="hola">
                 <button style={led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
-{/*
+
 
                     {led.label}
 
-*/}
+
                 </button>
                 <LedList ledList={led.ledList}/>
             </div>
@@ -74,11 +74,11 @@ const styles = {
         margin: "1% 1%",
         borderRadius: "50%",
         outline: "none",
-        /*textAlign: "center",
+        textAlign: "center",
         textDecoration: "none",
         fontSize: "10%",
         color: "white",
-        fontWeight: "bold"*/
+        fontWeight: "bold"
 
 
     },

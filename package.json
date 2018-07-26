@@ -1,8 +1,8 @@
 {
-  "homepage": "http://gustavolastra.github.io/react-gh-pages",
   "name": "weihnachtsbaum",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://gustavolastra.github.io/weihnachtsbaum",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

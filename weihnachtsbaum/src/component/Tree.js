@@ -25,7 +25,7 @@ class Tree extends Component {
 
         // BASE
         tempArray.map(object => {
-            object.buttonState= true;
+            object.buttonState= turn;
             console.log("object.buttonState: " + object.buttonState)
 
             // RECURSION
@@ -41,19 +41,10 @@ class Tree extends Component {
         let seed = this.state.numberOfLevels;
 
         if (turn === true){
-            /*tempArray.map(led => {
-                led.map(led =>  led.buttonState = true)
-            })*/
             this.recursiveTurn(true, tempArray, seed)
-
-
         }
         else{
-            /*tempArray.map(led => {
-                led.map(led => led.buttonState = false)
-            })*/
-            this.recursiveTurn(false, seed, tempArray)
-
+            this.recursiveTurn(false, tempArray, seed)
         }
         this.setState({ledList: tempArray})
     }

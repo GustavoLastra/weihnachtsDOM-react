@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LedList from "./LedList.js"
+
 
 class Led extends Component {
     constructor(props) {
@@ -14,11 +16,39 @@ class Led extends Component {
     }
 
     render() {
+
+        const { led } = this.props;
+
         return (
-            <button style={this.props.led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
-                {this.props.led.label}
-            </button>
-        );
+            <div id="hola">
+                <button style={led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
+{/*
+
+                    {led.label}
+
+*/}
+                </button>
+                <LedList ledList={led.ledList}/>
+            </div>
+
+        )
+
+/*        if (led.ledList.length) {
+            console.log("LED True led: "+ JSON.stringify(led));
+            return (
+                <LedList
+                ledList={led.ledList}/>
+            );
+
+        } else {
+            console.log("LED False led: "+ JSON.stringify(led));
+            return (
+                <button style={this.props.led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
+                    {this.props.led.label}
+                </button>
+            );
+        }*/
+
     }
 }
 
@@ -44,11 +74,11 @@ const styles = {
         margin: "1% 1%",
         borderRadius: "50%",
         outline: "none",
-        textAlign: "center",
+        /*textAlign: "center",
         textDecoration: "none",
         fontSize: "10%",
         color: "white",
-        fontWeight: "bold"
+        fontWeight: "bold"*/
 
 
     },

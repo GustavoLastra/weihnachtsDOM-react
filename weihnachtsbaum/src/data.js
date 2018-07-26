@@ -1,14 +1,30 @@
-const TreeData = {
-    "ledRows": [
-        {"leds": [{
+const InitialLedList = [{
             label: "html",
-                parentId: 0,
-                ownId: 1, buttonState : false,
-                leds: []
-        }]},
-        {"leds": [{label: "head",parentId: 1, ownId: 11, buttonState : false}, {label: "body",parentId: 1, ownId: 12, buttonState : false}]},
-        {"leds": [{label: "meta",parentId: 11, ownId: 111, buttonState : false}, {label: "link", parentId: 11, ownId: 112, buttonState : false}, {label: "p", parentId: 12, ownId: 121, buttonState : false},{label: "div", parentId: 12, ownId: 122, buttonState : false}]},
-    ]
-}
+            buttonState : false,
+            ledList: [
+                {label: "head", buttonState : false, ledList: [
+                            {label: "meta", buttonState : false, ledList: [] },
+                            {label: "link", buttonState : false, ledList: []}
+                            ]
+                },
+                {label: "body", buttonState : false, ledList: [
+                        {label: "p",buttonState : false, ledList: []},
+                        {label: "div", buttonState : false, ledList: []}
+                        ]
+                }]
+            }]
 
-export default TreeData;
+
+
+/*const  LedList = [];
+
+const Led = {
+    label: "head",
+    buttonState : false,
+    ledList: []
+}*/
+
+
+
+
+export default InitialLedList;

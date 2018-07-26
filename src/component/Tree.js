@@ -8,7 +8,7 @@ class Tree extends Component {
         super();
         this.state = {
             ledList: InitialLedList,
-            numberOfLevels: 4,
+            numberOfLevels: 6,
         };
         //this.addLedRow = this.addLedRow.bind(this);
         this.onTurn = this.onTurn.bind(this);
@@ -17,35 +17,39 @@ class Tree extends Component {
         this.recursiveCreate = this.recursiveCreate.bind(this);
     }
 
-    recursiveTurn(turn, tempArray, seed) {
-        console.log("recursiveTurn seed: " + seed)
+    recursiveTurn(actuallevel,levels, turn, tempArray) {
+        console.log("recursiveTurn seed: " + actuallevel)
         console.log("recursiveTurn tempArray: " + JSON.stringify(tempArray))
 
         // TERMINATION
-        if (seed < 1) return;
+        if (actuallevel === levels) return;
 
         // BASE
-        tempArray.map(object => {
-            object.buttonState= turn;
-            console.log("object.buttonState: " + object.buttonState)
+        if (actuallevel < levels) {
+            tempArray.map(object => {
+                object.buttonState= turn;
+                console.log("object.buttonState: " + object.buttonState)
 
-            // RECURSION
-            seed--;
-            return this.recursiveTurn(turn, object.ledList, seed);
-        })
+                // RECURSION
+                actuallevel++;
+                return this.recursiveTurn(actuallevel,levels, turn, object.ledList);
+            })
+        }
+
 
 
     }
 
     onTurn(turn) {
         let tempArray = this.state.ledList;
-        let seed = this.state.numberOfLevels;
+        let levels = this.state.numberOfLevels;
+        let actuallevel = 0;
 
         if (turn === true){
-            this.recursiveTurn(true, tempArray, seed)
+            this.recursiveTurn(actuallevel,levels, true, tempArray )
         }
         else{
-            this.recursiveTurn(false, tempArray, seed)
+            this.recursiveTurn(actuallevel,levels, false, tempArray)
         }
         this.setState({ledList: tempArray})
     }
@@ -82,8 +86,9 @@ class Tree extends Component {
 
         let newTree = [];
         let actualLevel = 0;
-
+        this.setState({numberOfLevels: levels});
         this.recursiveCreate(levels, actualLevel, newTree);
+        console.log("newTree" + JSON.stringify(newTree));
         this.setState({ledList: newTree})
     }
 

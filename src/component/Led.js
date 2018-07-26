@@ -71,7 +71,6 @@ const styles = {
         boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
         width: "4%",
         cursor: "pointer",
-        margin: "1% 1%",
         borderRadius: "50%",
         outline: "none",
         textAlign: "center",

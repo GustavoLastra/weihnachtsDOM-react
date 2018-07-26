@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9aed15-2590-4611-88e4-91774519ed06" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/src/component/Led.js" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/src/component/Led.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/src/component/LedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/src/component/LedList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/src/component/Tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/src/component/Tools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/src/component/Tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/src/component/Tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/src/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weihnachtsbaum/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/weihnachtsbaum/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44162032">
+    <splitter split-orientation="horizontal" split-proportion="0.43601462">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
@@ -58,11 +56,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Tools.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Tools.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/weihnachtsbaum/src/component/Tools.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
+                <state relative-caret-position="134">
                   <caret line="30" selection-start-line="30" selection-end-line="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/weihnachtsbaum/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -70,13 +77,13 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.7058824">
+        <splitter split-orientation="horizontal" split-proportion="0.24011858">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="Led.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/weihnachtsbaum/src/component/Led.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="540">
+                    <state relative-caret-position="155">
                       <caret line="36" column="17" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="17" />
                       <folding>
                         <element signature="e#0#41#0" expanded="true" />
@@ -115,6 +122,7 @@
     <findStrings>
       <find>if</find>
       <find>&amp;&amp;</find>
+      <find>conso</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,6 +142,7 @@
         <option value="$PROJECT_DIR$/weihnachtsbaum/src/component/Tree.js" />
         <option value="$PROJECT_DIR$/weihnachtsbaum/src/component/LedList.js" />
         <option value="$PROJECT_DIR$/weihnachtsbaum/src/component/Tools.js" />
+        <option value="$PROJECT_DIR$/weihnachtsbaum/package.json" />
       </list>
     </option>
   </component>
@@ -151,10 +160,9 @@
       <path value="$PROJECT_DIR$/weihnachtsbaum/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
-    <option name="height" value="709" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -232,25 +240,25 @@
       <option name="presentableId" value="Default" />
       <updated>1532361696333</updated>
       <workItem from="1532361699556" duration="30829000" />
-      <workItem from="1532465970500" duration="39090000" />
+      <workItem from="1532465970500" duration="39689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69919000" />
+    <option name="totallyTimeSpent" value="70518000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" weight="0.13112165" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1310564" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.05241379" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.33931035" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -411,7 +419,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weihnachtsbaum/src/component/Led.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="155">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -431,8 +439,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weihnachtsbaum/src/component/Tools.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="134">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weihnachtsbaum/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>

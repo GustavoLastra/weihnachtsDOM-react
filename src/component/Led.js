@@ -1,36 +1,35 @@
 import React, { Component } from 'react';
 import LedList from "./LedList.js"
+import './css/Tree.css';
 
 
 class Led extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
         };
-        this.onClick = this.onClick.bind(this);
+        this.onClickTurn = this.onClickTurn.bind(this);
     }
 
-    onClick() {
-
+    onClickTurn() {
+        this.props.led.buttonState===false
+            ? (
+                    this.props.onTurn(this.props.id, true)
+            ):(
+                    this.props.onTurn(this.props.id, false)
+            ) ;
     }
 
     render() {
 
         const { led } = this.props;
-
         return (
-            <div id="hola">
-                <button style={led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
-
-
-                    {led.label}
-
-
-                </button>
+            <div className={"hallo"}>
+                    <button onClick={this.onClickTurn} className={led.buttonState=== true? "backgroundOn": "backgroundOff"}> {/*style={led.buttonState=== true? styles.backgroundOn:styles.backgroundOff }*/}
+                        {led.label}
+                    </button>
                 <LedList ledList={led.ledList}/>
             </div>
-
         )
 
 /*        if (led.ledList.length) {
@@ -54,33 +53,40 @@ class Led extends Component {
 
 const styles = {
     backgroundOn : {
+        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
+        width: "50 px",
+        cursor: "pointer",
+        borderRadius: "50%",
+        outline: "none",
+        textAlign: "center",
+        textDecoration: "none",
+        fontSize: "10%",
+        fontWeight: "bold",
+        height: "25px",
+        margin:"25px",
         backgroundColor: '#ffef96',
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        width: "4%",
-        cursor: "pointer",
-        borderRadius: "50%",
-        outline: "none",
-        textAlign: "center",
-        textDecoration: "none",
-        fontSize: "10%",
-        color: "#007bff",
-        fontWeight: "bold"
-},
-    backgroundOff : {
-        backgroundColor: '#b2b2b2',
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        width: "4%",
-        cursor: "pointer",
-        borderRadius: "50%",
-        outline: "none",
-        textAlign: "center",
-        textDecoration: "none",
-        fontSize: "10%",
-        color: "white",
-        fontWeight: "bold"
-
-
+        color: "black",
     },
+    backgroundOff : {
+        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
+        width: "50 px",
+        cursor: "pointer",
+        borderRadius: "50%",
+        outline: "none",
+        /*textAlign: "center",*/
+        textDecoration: "none",
+        fontSize: "10%",
+        fontWeight: "bold",
+        height: "25px",
+
+        backgroundColor: '#b2b2b2',
+        color: "white",
+
+        margin: "25px",
+    },
+
+    content: {
+    }
 }
 
 export default Led;

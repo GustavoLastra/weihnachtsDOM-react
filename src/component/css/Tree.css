@@ -1,0 +1,40 @@
+.ledList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.backgroundOff {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    /*textAlign: center;*/
+    text-decoration: none;
+    font-size: 10%;
+    font-weight: bold;
+    height: 25px;
+    background-color: #b2b2b2;
+    color: white;
+    margin-left: 50%;
+}
+
+.backgroundOn{
+    boxShadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 50px;
+    cursor: pointer;
+    borderRadius: 50%;
+    outline: none;
+    textAlign: center;
+    textDecoration: none;
+    fontSize: 10%;
+    fontWeight: bold;
+    height: 25px;
+    margin:25px;
+    backgroundColor: #ffef96;
+    color: black;
+}
+
+.hallo {
+    margin: 10px;
+}

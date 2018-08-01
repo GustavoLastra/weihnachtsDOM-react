@@ -9,7 +9,6 @@ class Tools extends Component {
         };
         this.onClickCreate = this.onClickCreate.bind(this);
         this.onClickTurn = this.onClickTurn.bind(this);
-        this.handleChange = this.handleChange.bind(this);
     }
 
     onClickCreate() {
@@ -26,27 +25,17 @@ class Tools extends Component {
             ) ;
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
 
     render() {
         return (
             <div style={styles.toolsRow}>
                 <div style={styles.toolItem}>
-                    <input style={styles.inputNumber}
-                           placeholder="Number of levels..."
-                           type="number"
-                           value={this.state.value}
-                           onChange={this.handleChange}
-                    />
+                    <button onClick={this.onClickTurn} style={this.state.buttonName==="Turn On"?styles.primaryButton:styles.dangerButton}>{this.state.buttonName}</button>
                 </div>
                 <div style={styles.toolItem}>
                     <button onClick={this.onClickCreate} style={styles.primaryButton}>Create Tree</button>
                 </div>
-                <div style={styles.toolItem}>
-                    <button onClick={this.onClickTurn} style={this.state.buttonName==="Turn On"?styles.primaryButton:styles.dangerButton}>{this.state.buttonName}</button>
-                </div>
+
             </div>
         );
     }
@@ -77,7 +66,7 @@ const styles = {
         padding: "15px 32px",
         textAlign: "center",
         textDecoration: "none",
-        fontSize: "16px",
+        fontSize: "1em",
         cursor: "pointer",
         borderRadius: "50%",
         outline: "none"
@@ -90,7 +79,7 @@ const styles = {
         padding: "15px 32px",
         textAlign: "center",
         textDecoration: "none",
-        fontSize: "16px",
+        fontSize: "1em",
         cursor: "pointer",
         borderRadius: "50%",
         outline: "none"
@@ -100,3 +89,18 @@ const styles = {
 
 export default Tools;
 
+/*
+this.handleChange = this.handleChange.bind(this);
+
+handleChange(event) {
+    this.setState({value: event.target.value});
+}
+
+<div style={styles.toolItem}>
+    <input style={styles.inputNumber}
+           placeholder="Number of levels..."
+           type="number"
+           value={this.state.value}
+           onChange={this.handleChange}
+    />
+</div>*/

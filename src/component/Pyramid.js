@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import Led from "./Led.js"
-import './css/Tree.css';
+/*
+import {Component} from "react";
 
-
-class LedList extends Component {
+class Pyramid extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,16 +16,16 @@ class LedList extends Component {
     render() {
         const { ledList } = this.props;
         return (
-            <div className={"ledList"}> {/*style={styles.ledList}*/}
+            <div style={styles.ledList}> {/!*style={styles.ledList}*!/}
                 {  this.props.ledList &&
-                    this.props.ledList.map((led, index) => {
-                        return <Led
-                            key={index}
-                            id={index}
-                            led={led}
-                            onTurn={this.onTurnSegment}
-                        />
-                    })
+                this.props.ledList.map((led, index) => {
+                    return <Led
+                        key={index}
+                        id={index}
+                        led={led}
+                        onTurn={this.onTurnSegment}
+                    />
+                })
                 }
             </div>
         );
@@ -36,12 +34,12 @@ class LedList extends Component {
 
 const styles = {
     ledList: {
-        /*display: "flex",
+        display: "flex",
         flexDirection: "row",
         alignItems: "center",
         alignContent: "center",
         alignSelf: "center",
-        justifyContent: "center",*/
+        justifyContent: "center",
         width: "50%",
     },
 
@@ -56,5 +54,6 @@ const styles = {
 
 }
 
-export default LedList;
+export default Pyramid;
 
+*/

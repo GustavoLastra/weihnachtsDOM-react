@@ -42,11 +42,7 @@ const InitialledList = [{
             "ledList": [{
                 "label": "p",
                 "buttonState": false,
-                "ledList": [{
-                    "label": "div",
-                    "buttonState": false,
-                    "ledList": []
-                },
+                "ledList": [
                     {
                         "label": "div",
                         "buttonState": false,

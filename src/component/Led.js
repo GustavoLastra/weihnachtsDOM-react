@@ -39,7 +39,7 @@ class Led extends React.Component {
                 <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>
-                            <button onClick={()=>context.update(led.id, led.buttonState)}
+                            <button onClick={()=>context.update(led.id, !led.buttonState)}
                                     className={led.buttonState=== true? "led backgroundOn": "led backgroundOff"}>
                                 {led.label}
                             </button>

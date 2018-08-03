@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9aed15-2590-4611-88e4-91774519ed06" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/shared/context.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/shared/provider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Led.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Led.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/LedList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/LedList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/shared/provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/shared/provider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/shared/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/shared/service.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.24571429">
+    <splitter split-orientation="horizontal" split-proportion="0.28190476">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Tree.js" pinned="false" current-in-tab="false">
@@ -46,20 +41,11 @@
           <file leaf-file-name="provider.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/component/shared/provider.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+                <state relative-caret-position="226">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                   <folding>
                     <element signature="e#36#77#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="service.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/component/shared/service.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="90" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="90" />
                 </state>
               </provider>
             </entry>
@@ -93,7 +79,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.33014354">
+        <splitter split-orientation="horizontal" split-proportion="0.27586207">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="LedList.js" pinned="false" current-in-tab="true">
@@ -115,8 +101,8 @@
               <file leaf-file-name="Led.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/component/Led.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="176">
-                      <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+                    <state relative-caret-position="226">
+                      <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
                       <folding>
                         <element signature="e#0#26#0" expanded="true" />
                       </folding>
@@ -127,8 +113,8 @@
               <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/data.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state>
-                      <caret column="20" selection-start-column="6" selection-end-column="20" />
+                    <state relative-caret-position="105">
+                      <caret line="7" column="16" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="16" />
                     </state>
                   </provider>
                 </entry>
@@ -169,8 +155,8 @@
       <find>numberOfLevels</find>
       <find>React</find>
       <find>InitialLedList</find>
-      <find>props</find>
       <find>onCreate</find>
+      <find>props</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;buttonState&quot;</replace>
@@ -201,11 +187,11 @@
         <option value="$PROJECT_DIR$/src/component/css/tree.css" />
         <option value="$PROJECT_DIR$/src/data.js" />
         <option value="$PROJECT_DIR$/src/component/Tools.js" />
-        <option value="$PROJECT_DIR$/src/component/shared/service.js" />
         <option value="$PROJECT_DIR$/src/component/shared/context.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/component/LedList.js" />
         <option value="$PROJECT_DIR$/src/component/Tree.js" />
+        <option value="$PROJECT_DIR$/src/component/shared/service.js" />
         <option value="$PROJECT_DIR$/src/component/shared/provider.js" />
         <option value="$PROJECT_DIR$/src/component/Led.js" />
       </list>
@@ -302,12 +288,12 @@
       <updated>1532361696333</updated>
       <workItem from="1532361699556" duration="30829000" />
       <workItem from="1532465970500" duration="40306000" />
-      <workItem from="1532936096460" duration="45878000" />
+      <workItem from="1532936096460" duration="50410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127982000" />
+    <option name="totallyTimeSpent" value="132514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,7 +308,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16600476" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16600476" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32977778" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -330,7 +316,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32977778" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.12827586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.0" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -455,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/LedList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -469,13 +448,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/shared/service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="90" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -503,10 +475,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/shared/service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="90" selection-start-line="9" selection-start-column="90" selection-end-line="9" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/shared/provider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        <state relative-caret-position="226">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#36#77#0" expanded="true" />
           </folding>
@@ -515,8 +501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Led.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="226">
+          <caret line="37" column="37" lean-forward="true" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

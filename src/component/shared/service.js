@@ -8,8 +8,6 @@ const TreeService = {
     },
     update(id, newButtonState){
         console.log("TreeService update id: " + id + "newButtonState: " + newButtonState);
-
-
     }
 }
 

@@ -12,27 +12,37 @@ class MyProvider extends Component {
     turn = (id, newButtonState) => {
         console.log("MYPROVIDER turn id: " + id + " newButtonState: " + newButtonState);
         let temp= this.state.tree;
-        this.scan(temp, id, newButtonState)
+        let found = false;
+        this.scan(temp, id, newButtonState, found)
         this.setState({tree: temp});
-        console.log("turn new tree: " + JSON.stringify(this.state.tree))
+        //console.log("turn new tree: " + JSON.stringify(this.state.tree))
     }
 
-    scan = (obj, id, newButtonState) => {
-        console.log("obj: " + JSON.stringify(obj))
-        obj.map(led =>{
-            if (led.id === id) {
-                console.log("if (led.id === id)" );
-                console.log("led.buttonState: "+ led.buttonState );
+    scan = (obj, id, newButtonState, found) => {
+        if (found===true) {
+            console.log("if found===true" );
+            obj.map(led =>{
                 led.buttonState = newButtonState;
-                console.log("led.buttonState: "+ led.buttonState );
-            }
-            if(led.ledList.length) {
-                //recursion
-                this.scan(led.ledList, id, newButtonState)
-            }
+                this.scan(led.ledList, id, newButtonState, found)
+            })
+        } else {
+            obj.map(led =>{
+                if (led.id === id) {
+                    found = true;
+                    console.log("ELSE if (led.id === id)" );
+                    console.log("led.buttonState: "+ led.buttonState );
+                    led.buttonState = newButtonState;
+                    console.log("led.buttonState: "+ led.buttonState );
+                    this.scan(led.ledList, id, newButtonState, found);
+                } else if(found===false){
+                    //recursion
+                    console.log("ELSE" );
+                    this.scan(led.ledList, id, newButtonState, found);
+                }
 
-        })
 
+            })
+        }
     };
 
 

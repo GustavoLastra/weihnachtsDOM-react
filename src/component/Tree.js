@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import LedList from "./LedList.js"
-import Tools from "./Tools.js"
-/*
-import Pyramid from "./Pyramid.js"
-*/
-import InitialLedList from "../data.js"
+import React from 'react';
+import LedList from "./LedList.js";
+import Tools from "./Tools.js";
+import TreeService from "./shared/service";
+//import InitialLedList from "../data.js"
 
-class Tree extends Component {
-    constructor() {
-        super();
+
+class Tree extends React.Component {
+    constructor(props) {
+        super(props);
         this.state = {
             ledList: "",
             numberOfLevels: 6,
         };
         //this.addLedRow = this.addLedRow.bind(this);
         this.onTurn = this.onTurn.bind(this);
-        this.recursiveTurn = this.recursiveTurn.bind(this);
         this.onTurnSegment = this.onTurnSegment.bind(this);
+        this.recursiveTurn = this.recursiveTurn.bind(this);
         this.onCreate = this.onCreate.bind(this);
     }
 
@@ -40,8 +39,10 @@ class Tree extends Component {
         }
     }
 
-    onTurnSegment(key, turn) {
-        console.log("onTurnSegment: " +key+ " " + turn);
+    onTurnSegment(id,turn) {
+        console.log("onTurnSegment: " + id + " " + turn);
+        id++;
+        console.log("onTurnSegment: " + id + " " + turn);
     }
 
 
@@ -59,8 +60,11 @@ class Tree extends Component {
         this.setState({ledList: tempArray})
     }
 
-    onCreate(levels) {
-        this.setState({ledList: InitialLedList})
+    onCreate() {
+
+        let tree = TreeService.getTree();
+
+        this.setState({ledList: tree })
     }
 
     render() {
@@ -78,12 +82,10 @@ class Tree extends Component {
                             ledList={this.state.ledList}
                             levels={this.state.numberOfLevels}
                             onTurnSegment={this.onTurnSegment}
+                            buttonsState={false}
                         />
 
                 </div>
-{/*
-                <Pyramid></Pyramid>
-*/}
             </div>
 
 

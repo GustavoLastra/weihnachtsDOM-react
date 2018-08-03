@@ -12,7 +12,7 @@ class Tools extends Component {
     }
 
     onClickCreate() {
-        this.props.onCreate(this.state.value);
+        this.props.onCreate();
     }
 
     onClickTurn() {

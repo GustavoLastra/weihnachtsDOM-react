@@ -1,92 +1,60 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LedList from "./LedList.js"
-import './css/Tree.css';
+import './css/tree.css';
 
-
-class Led extends Component {
+class Led extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            buttonState: false,
         };
-        this.onClickTurn = this.onClickTurn.bind(this);
+        this.onTurn = this.onTurn.bind(this);
     }
 
-    onClickTurn() {
-        this.props.led.buttonState===false
-            ? (
-                    this.props.onTurn(this.props.id, true)
-            ):(
-                    this.props.onTurn(this.props.id, false)
-            ) ;
+    onTurn() {
+        this.state.buttonState===false?
+            this.setState({buttonState: true})
+            : this.setState({buttonState: false})
     }
 
     render() {
+        {console.log("LED")}
+        const { led, buttonsState} = this.props;
 
-        const { led } = this.props;
-        return (
-            <div className={"hallo"}>
-                    <button onClick={this.onClickTurn} className={led.buttonState=== true? "backgroundOn": "backgroundOff"}> {/*style={led.buttonState=== true? styles.backgroundOn:styles.backgroundOff }*/}
+        if (buttonsState) {
+            return (
+                <div className={"hallo"}>
+                    <button onClick={this.onTurn}
+                            className={"led backgroundOn"}>
                         {led.label}
                     </button>
-                <LedList ledList={led.ledList}/>
-            </div>
-        )
-
-/*        if (led.ledList.length) {
-            console.log("LED True led: "+ JSON.stringify(led));
-            return (
-                <LedList
-                ledList={led.ledList}/>
+                    { led.ledList && led.ledList.length > 0 &&
+                    <LedList ledList={led.ledList}
+                             buttonsState={this.buttonState}/>
+                    }
+                </div>
             );
 
         } else {
-            console.log("LED False led: "+ JSON.stringify(led));
             return (
-                <button style={this.props.led.buttonState=== true? styles.backgroundOn:styles.backgroundOff } >
-                    {this.props.led.label}
-                </button>
+                <div className={"hallo"}>
+                    <button onClick={this.onTurn}
+                            className={"led backgroundOff"}>
+                        {led.label}
+                    </button>
+                    { led.ledList && led.ledList.length > 0 &&
+                    <LedList ledList={led.ledList}
+                             buttonsState={this.buttonState}/>
+                    }
+                </div>
             );
-        }*/
+        }
+
+
 
     }
-}
 
-const styles = {
-    backgroundOn : {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        width: "50 px",
-        cursor: "pointer",
-        borderRadius: "50%",
-        outline: "none",
-        textAlign: "center",
-        textDecoration: "none",
-        fontSize: "10%",
-        fontWeight: "bold",
-        height: "25px",
-        margin:"25px",
-        backgroundColor: '#ffef96',
-        color: "black",
-    },
-    backgroundOff : {
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        width: "50 px",
-        cursor: "pointer",
-        borderRadius: "50%",
-        outline: "none",
-        /*textAlign: "center",*/
-        textDecoration: "none",
-        fontSize: "10%",
-        fontWeight: "bold",
-        height: "25px",
 
-        backgroundColor: '#b2b2b2',
-        color: "white",
-
-        margin: "25px",
-    },
-
-    content: {
-    }
 }
 
 export default Led;

@@ -1,0 +1,31 @@
+.ledList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.backgroundOff {
+    color: white;
+    background-color: #b2b2b2;
+}
+
+.backgroundOn{
+    color: black;
+    background-color: #ffef96;
+}
+
+.led {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    text-decoration: none;
+    font-size: 10%;
+    font-weight: bold;
+    height: 25px;
+    margin-left: 50%;
+}
+
+.hallo {
+    margin: 1px;
+}

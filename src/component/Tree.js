@@ -2,6 +2,8 @@ import React from 'react';
 import LedList from "./LedList.js";
 import Tools from "./Tools.js";
 import TreeService from "./shared/service";
+import MyContext from "./shared/context";
+
 //import InitialLedList from "../data.js"
 
 
@@ -11,10 +13,11 @@ class Tree extends React.Component {
         this.state = {
             ledList: "",
             numberOfLevels: 6,
+            showTree: false
         };
         //this.addLedRow = this.addLedRow.bind(this);
         this.onTurn = this.onTurn.bind(this);
-        this.onTurnSegment = this.onTurnSegment.bind(this);
+        this.onTurnSegmentRecursive = this.onTurnSegmentRecursive.bind(this);
         this.recursiveTurn = this.recursiveTurn.bind(this);
         this.onCreate = this.onCreate.bind(this);
     }
@@ -39,10 +42,8 @@ class Tree extends React.Component {
         }
     }
 
-    onTurnSegment(id,turn) {
-        console.log("onTurnSegment: " + id + " " + turn);
-        id++;
-        console.log("onTurnSegment: " + id + " " + turn);
+    onTurnSegmentRecursive() {
+        console.log("TREE onTurnSegment")
     }
 
 
@@ -61,10 +62,9 @@ class Tree extends React.Component {
     }
 
     onCreate() {
-
-        let tree = TreeService.getTree();
-
-        this.setState({ledList: tree })
+        /*let tree = TreeService.getTree();
+        this.setState({ledList: tree })*/
+        this.setState({showTree: true })
     }
 
     render() {
@@ -78,14 +78,19 @@ class Tree extends React.Component {
                 </div>
 
                 <div style={styles.treeContainer} >
-                        <LedList
-                            ledList={this.state.ledList}
-                            levels={this.state.numberOfLevels}
-                            onTurnSegment={this.onTurnSegment}
-                            buttonsState={false}
-                        />
-
+                    { this.state.showTree &&
+                    <MyContext.Consumer>
+                        {(context) => (
+                            <React.Fragment>
+                                <LedList
+                                    ledList={context.state.tree}
+                                />
+                            </React.Fragment>
+                        )}
+                    </MyContext.Consumer>
+                    }
                 </div>
+                <p>{console.log(React.version)}</p>
             </div>
 
 

@@ -6,7 +6,9 @@ const TreeService = {
     getTree(){
         return InitialledList;
     },
-    update(id){
+    update(id, newButtonState){
+        console.log("TreeService update id: " + id + "newButtonState: " + newButtonState);
+
 
     }
 }

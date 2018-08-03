@@ -4,7 +4,7 @@ import './css/tree.css';
 
 
 function LedList(props) {
-    const { ledList, buttonsState } = props;
+    const { ledList } = props;
     return (
         <div className={"ledList"}> {/*style={styles.ledList}*/}
             {console.log("LEDLIST")}
@@ -13,7 +13,6 @@ function LedList(props) {
                     return <Led
                         key={index}
                         led={led}
-                        buttonsState={buttonsState}
                     />
                 })
             }

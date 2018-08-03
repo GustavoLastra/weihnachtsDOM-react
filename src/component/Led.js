@@ -1,57 +1,57 @@
 import React from 'react';
 import LedList from "./LedList.js"
 import './css/tree.css';
+import TreeService from "./shared/service";
+import MyContext from "./shared/context";
+
+
 
 class Led extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            buttonState: false,
         };
         this.onTurn = this.onTurn.bind(this);
+        //this.onTurnSegmentRecursive = this.onTurnSegmentRecursive.bind(this);
+
     }
 
     onTurn() {
-        this.state.buttonState===false?
-            this.setState({buttonState: true})
-            : this.setState({buttonState: false})
+        const {led} = this.props;
+        led.buttonState===false?
+            TreeService.update(led.id, true)
+            : TreeService.update(led.id, true);
+        //this.onTurnSegmentRecursive();
+
     }
 
+    /*onTurnSegmentRecursive() {
+        this.props.onTurnSegmentRecursive();
+        console.log("LED onTurnSegment")
+    }*/
+
+
     render() {
-        {console.log("LED")}
-        const { led, buttonsState} = this.props;
+        const { led} = this.props;
 
-        if (buttonsState) {
-            return (
-                <div className={"hallo"}>
-                    <button onClick={this.onTurn}
-                            className={"led backgroundOn"}>
-                        {led.label}
-                    </button>
-                    { led.ledList && led.ledList.length > 0 &&
-                    <LedList ledList={led.ledList}
-                             buttonsState={this.buttonState}/>
-                    }
-                </div>
-            );
+        return (
+            <div className={"hallo"}>
+                <MyContext.Consumer>
+                    {(context) => (
+                        <React.Fragment>
+                            <button onClick={()=>context.update(led.id, led.buttonState)}
+                                    className={led.buttonState=== true? "led backgroundOn": "led backgroundOff"}>
+                                {led.label}
+                            </button>
+                        </React.Fragment>
+                    )}
 
-        } else {
-            return (
-                <div className={"hallo"}>
-                    <button onClick={this.onTurn}
-                            className={"led backgroundOff"}>
-                        {led.label}
-                    </button>
-                    { led.ledList && led.ledList.length > 0 &&
-                    <LedList ledList={led.ledList}
-                             buttonsState={this.buttonState}/>
-                    }
-                </div>
-            );
-        }
-
-
-
+                </MyContext.Consumer>
+                { led.ledList && led.ledList.length > 0 &&
+                <LedList ledList={led.ledList}/>
+                }
+            </div>
+        );
     }
 
 

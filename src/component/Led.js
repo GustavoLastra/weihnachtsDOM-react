@@ -3,7 +3,7 @@ import LedList from "./LedList.js"
 import './css/tree.css';
 import MyContext from "./shared/context";
 
-class Led extends React.Component {
+class Led extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {};
@@ -12,8 +12,10 @@ class Led extends React.Component {
     render() {
         const { led} = this.props;
 
+
         return (
             <div className={"ledDiv"}>
+                {console.log("LED led.id: " + led.id)}
                 <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>

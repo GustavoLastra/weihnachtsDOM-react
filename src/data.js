@@ -1,8 +1,5 @@
-const InitialledList = [{
-    "label": "Document",
-    "id": "0",
-    "buttonState": false,
-    "ledList": [{"label": "html",
+const InitialledList = [
+        {"label": "html",
         "id": "1",
         "buttonState": false,
         "ledList": [{
@@ -297,7 +294,7 @@ const InitialledList = [{
                 ]
             }
         ]
-    }]
+
 }]
 
 /*const  "ledList" = [];

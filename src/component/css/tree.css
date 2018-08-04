@@ -30,6 +30,7 @@
     margin: auto;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top: 2%;
+    overflow: auto;
 }
 
 .hint {
@@ -62,7 +63,7 @@
 
 .led {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    width: 50px;
+    width: 30px;
     cursor: pointer;
     border-radius: 50%;
     outline: none;
@@ -74,7 +75,7 @@
 }
 
 .ledDiv {
-    margin: 1px;
+    margin: 1%;
 }
 
 
@@ -89,7 +90,7 @@
 }
 
 .toolItem {
-    margin:1%;
+    margin:2%;
 }
 
 .toolsButton {
@@ -98,11 +99,11 @@
     box-shadow: 0 3px 10px rgba(0,0,0,.23), 0 3px 10px rgba(0,0,0,.16);
     outline: 0!important;
     color: #fff;
-    font-size: 26px;
-    height: 56px;
+    font-size: 1em;
+    height: 30%;
     line-height: 26px;
     text-align: center;
-    padding: 15px 30px;
+    padding: 10px 20px;
     text-decoration: none;
 }
 

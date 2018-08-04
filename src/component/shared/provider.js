@@ -5,10 +5,11 @@ import InitialledList from "../../data.js"
 
 class MyProvider extends Component {
     state = {
-        tree: InitialledList
+        tree: InitialledList,
     }
 
     turn = (id, newButtonState) => {
+        console.log("id: " + id);
         let temp= this.state.tree;
         let found = false;
         this.scan(temp, id, newButtonState, found)

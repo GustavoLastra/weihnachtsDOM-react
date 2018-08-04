@@ -3,6 +3,8 @@ import LedList from "./LedList.js";
 import Tools from "./Tools.js";
 import TreeService from "./shared/service";
 import MyContext from "./shared/context";
+import './css/tree.css';
+
 
 //import InitialLedList from "../data.js"
 
@@ -62,22 +64,20 @@ class Tree extends React.Component {
     }
 
     onCreate() {
-        /*let tree = TreeService.getTree();
-        this.setState({ledList: tree })*/
         this.setState({showTree: true })
     }
 
     render() {
         return (
-            <div style={styles.container}>
-                <div style={styles.toolsContainer}>
+            <div className={"rootContainer"}>
+                <div className={"toolsContainer"}>
                     <Tools
                         onTurn={this.onTurn}
                         onCreate={this.onCreate}
                     />
                 </div>
 
-                <div style={styles.treeContainer} >
+                <div className={"treeContainer"} >
                     { this.state.showTree &&
                     <MyContext.Consumer>
                         {(context) => (
@@ -89,96 +89,14 @@ class Tree extends React.Component {
                         )}
                     </MyContext.Consumer>
                     }
+                    { !this.state.showTree &&
+                    <div className="hint">Please click on the "Create Tree" button</div>
+                    }
                 </div>
                 <p>{console.log(React.version)}</p>
             </div>
-
-
-
-
-
         );
     }
 }
 
-const styles = {
-
-    container: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-arround",
-        width:"98%",
-        margin: "auto"
-    },
-
-    toolsContainer: {
-        display: "flex",
-        flexFlow: "row wrap",
-        width: "100%",
-        margin: "auto",
-        backgroundColor: "#ffcc66",
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        marginTop: "5%"
-    },
-
-    treeContainer: {
-        /*flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "",*/
-        backgroundColor: "#228b22",
-        paddingTop: "2%",
-        paddingBottom: "5%",
-        width: "100%",
-            /*
-                    display: "flex",
-            */
-        boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)",
-        marginTop: "2%"
-
-    },
-
-
-
-}
-
 export default Tree;
-
-/*
-recursiveCreate(levels, actualLevel, newLed) {
-    console.log("actualLevel " + actualLevel);
-    //Termination
-    if (actualLevel === levels) return;
-    var led = {
-        label: "div",
-        buttonState: false,
-        ledList: []
-    };
-    //let random = Math.floor((Math.random() * 100) + 1);
-    if (actualLevel === 0) {
-        actualLevel++;
-        newLed.push(led);
-        return (this.recursiveCreate(levels, actualLevel, newLed[0].ledList));
-    } else if(actualLevel < levels && actualLevel===1){
-        actualLevel++;
-        newLed.push(led);
-        newLed.push(led);
-        return (this.recursiveCreate(levels, actualLevel, newLed[0].ledList));
-        return (this.recursiveCreate(levels, actualLevel, newLed[1].ledList));
-    } else if(actualLevel < levels && actualLevel===2) {
-        actualLevel++;
-        newLed.push(led);
-        return (this.recursiveCreate(levels, actualLevel, newLed[0].ledList));
-    }
-}
-
-
-
-onCreate(levels) {
-
-    let newTree = [];
-    let actualLevel = 0;
-    this.setState({numberOfLevels: levels});
-    this.recursiveCreate(levels, actualLevel, newTree);
-    console.log("newTree" + JSON.stringify(newTree));
-    this.setState({ledList: newTree})
-}*/

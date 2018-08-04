@@ -35,7 +35,7 @@ class Led extends React.Component {
         const { led} = this.props;
 
         return (
-            <div className={"hallo"}>
+            <div className={"ledDiv"}>
                 <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>

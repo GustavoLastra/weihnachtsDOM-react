@@ -1,16 +1,63 @@
+
+/*Tree*/
+
+.rootContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.toolsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+    background-color: #00796B;
+    /*
+    background: -webkit-linear-gradient(-45deg, #f1e767 0%,#feb645 100%); !* Chrome10-25,Safari5.1-6 *!;
+    */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.treeContainer {
+    background-color:#009688;
+    /*
+    background: -webkit-linear-gradient(-45deg, #c9de96 0%,#8ab66b 44%,#398235 100%); !* Chrome10-25,Safari5.1-6 *!
+    */
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 98%;
+    margin: auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 2%;
+}
+
+.hint {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Material-Design-Icons;
+    font-style: italic;
+
+}
+
+/*LedList*/
+
+
 .ledList {
     display: flex;
     justify-content: space-around;
 }
 
+/*Led*/
+
 .backgroundOff {
-    color: white;
-    background-color: #b2b2b2;
+    color: #212121;
+    background-color: #BDBDBD;
 }
 
 .backgroundOn{
-    color: black;
-    background-color: #ffef96;
+    color: #FFFFFF;
+    background-color: #FF5252;
 }
 
 .led {
@@ -26,6 +73,41 @@
     margin-left: 50%;
 }
 
-.hallo {
+.ledDiv {
     margin: 1px;
+}
+
+
+/*Tools*/
+
+.toolsRow {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+}
+
+.toolItem {
+    margin:1%;
+}
+
+.toolsButton {
+    cursor: pointer;
+    background-color: #f44336;
+    box-shadow: 0 3px 10px rgba(0,0,0,.23), 0 3px 10px rgba(0,0,0,.16);
+    outline: 0!important;
+    color: #fff;
+    font-size: 26px;
+    height: 56px;
+    line-height: 26px;
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.weihnachsDOMLabel {
+    color: #FFFFFF;
+    line-height: 26px;
+
 }

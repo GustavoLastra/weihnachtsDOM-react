@@ -4,27 +4,13 @@ class Tools extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: "",
-            buttonName: "Turn On"
         };
         this.onClickCreate = this.onClickCreate.bind(this);
-        this.onClickTurn = this.onClickTurn.bind(this);
     }
 
     onClickCreate() {
         this.props.onCreate();
     }
-
-    onClickTurn() {
-        this.state.buttonName==="Turn On"
-            ? (this.setState({buttonName: "Turn Off"}),
-                this.props.onTurn(true)
-            ):(
-                this.setState({buttonName: "Turn On"}),
-                    this.props.onTurn(false)
-            ) ;
-    }
-
 
     render() {
         return (

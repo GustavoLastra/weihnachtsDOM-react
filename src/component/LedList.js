@@ -6,8 +6,7 @@ import './css/tree.css';
 function LedList(props) {
     const { ledList } = props;
     return (
-        <div className={"ledList"}> {/*style={styles.ledList}*/}
-            {console.log("LEDLIST")}
+        <div className={"ledList"}>
             {  ledList &&
                 ledList.map((led, index) => {
                     return <Led

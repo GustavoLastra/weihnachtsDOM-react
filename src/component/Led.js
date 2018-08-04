@@ -1,35 +1,13 @@
 import React from 'react';
 import LedList from "./LedList.js"
 import './css/tree.css';
-import TreeService from "./shared/service";
 import MyContext from "./shared/context";
-
-
 
 class Led extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
-        this.onTurn = this.onTurn.bind(this);
-        //this.onTurnSegmentRecursive = this.onTurnSegmentRecursive.bind(this);
-
+        this.state = {};
     }
-
-    onTurn() {
-        const {led} = this.props;
-        led.buttonState===false?
-            TreeService.update(led.id, true)
-            : TreeService.update(led.id, true);
-        //this.onTurnSegmentRecursive();
-
-    }
-
-    /*onTurnSegmentRecursive() {
-        this.props.onTurnSegmentRecursive();
-        console.log("LED onTurnSegment")
-    }*/
-
 
     render() {
         const { led} = this.props;
@@ -47,7 +25,7 @@ class Led extends React.Component {
                     )}
 
                 </MyContext.Consumer>
-                { led.ledList && led.ledList.length > 0 &&
+                {led.ledList && led.ledList.length > 0 &&
                 <LedList ledList={led.ledList}/>
                 }
             </div>

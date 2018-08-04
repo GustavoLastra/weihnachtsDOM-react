@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import LedList from "../LedList";
+import React from 'react';
 
 // first we will make a new context
 const MyContext = React.createContext();

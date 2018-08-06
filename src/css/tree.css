@@ -67,6 +67,7 @@
     width: 40px;
     cursor: pointer;
     border-radius: 50%;
+    border: none;
     outline: none;
     text-decoration: none;
     font-size: 1%;
@@ -75,10 +76,14 @@
     margin-left: 50%;
 }
 
+.led:active {
+    background-color: #f44336;
+    transform: translateY(2px);
+}
+
 .ledDiv {
     margin: 0;
 }
-
 
 /*Tools*/
 .toolsRow {
@@ -106,6 +111,12 @@
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
+    border: none;
+}
+
+.toolsButton:active {
+    background-color: #f44336;
+    transform: translateY(2px);
 }
 
 .weihnachsDOMLabel {

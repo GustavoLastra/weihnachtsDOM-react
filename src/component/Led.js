@@ -1,7 +1,7 @@
 import React from 'react';
 import LedList from "./LedList.js"
-import './css/tree.css';
-import MyContext from "./shared/context";
+import '../css/tree.css';
+import MyContext from "../shared/context";
 
 class Led extends React.PureComponent {
     constructor(props) {
@@ -11,8 +11,6 @@ class Led extends React.PureComponent {
 
     render() {
         const { led} = this.props;
-
-
         return (
             <div className={"ledDiv"}>
                 {console.log("LED led.id: " + led.id)}

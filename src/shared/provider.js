@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyContext from "./context";
-import InitialledList from "../../data.js"
+import InitialledList from "../data.js"
 
 
 class MyProvider extends Component {

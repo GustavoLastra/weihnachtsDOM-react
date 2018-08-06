@@ -1,6 +1,6 @@
 import React from 'react';
 import Led from "./Led.js"
-import './css/tree.css';
+import '../css/tree.css';
 
 
 function LedList(props) {

@@ -1,8 +1,8 @@
 import React from 'react';
 import LedList from "./LedList.js";
 import Tools from "./Tools.js";
-import MyContext from "./shared/context";
-import './css/tree.css';
+import MyContext from "../shared/context";
+import '../css/tree.css';
 
 class Tree extends React.Component {
     constructor(props) {
@@ -22,7 +22,6 @@ class Tree extends React.Component {
             <div className={"rootContainer"}>
                 <div className={"toolsContainer"}>
                     <Tools
-                        onTurn={this.onTurn}
                         onCreate={this.onCreate}
                     />
                 </div>

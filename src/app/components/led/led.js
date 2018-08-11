@@ -1,7 +1,7 @@
 import React from 'react';
-import LedList from "./LedList.js"
-import '../css/tree.css';
-import MyContext from "../shared/context";
+import LedList from "../led-list/led-list.js"
+import './led.css'
+import MyContext from "../../shared/context";
 
 class Led extends React.PureComponent {
     constructor(props) {

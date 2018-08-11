@@ -1,7 +1,6 @@
 import React from 'react';
-import Led from "./Led.js"
-import '../css/tree.css';
-
+import Led from "../led/led.js"
+import './led-list.css'
 
 function LedList(props) {
     const { ledList } = props;

@@ -1,8 +1,8 @@
 import React from 'react';
-import LedList from "./LedList.js";
-import Tools from "./Tools.js";
-import MyContext from "../shared/context";
-import '../css/tree.css';
+import LedList from "../led-list/led-list.js";
+import Tools from "../tools/tools.js";
+import MyContext from "../../shared/context";
+import './tree.css';
 
 class Tree extends React.Component {
     constructor(props) {

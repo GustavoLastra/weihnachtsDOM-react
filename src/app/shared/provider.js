@@ -8,6 +8,11 @@ class MyProvider extends Component {
         tree: InitialledList,
     }
 
+    initialTree = () => {
+        console.log("resetTree");
+        this.turn("1", false);
+    }
+
     turn = (id, newButtonState) => {
         console.log("id: " + id);
         let temp= this.state.tree;
@@ -41,7 +46,8 @@ class MyProvider extends Component {
         return (
             <MyContext.Provider value={{
                 state: this.state,
-                update: (id, turn) => this.turn(id, turn)
+                update: (id, turn) => this.turn(id, turn),
+                destroy: () => this.initialTree()
             }}>
                 {this.props.children}
             </MyContext.Provider>

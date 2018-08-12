@@ -14,7 +14,7 @@ class Tree extends React.Component {
     }
 
     onCreate(todo) {
-        if (todo=="create") {
+        if (todo==="create") {
             this.setState({showTree: true })
         } else {
             this.setState({showTree: false })

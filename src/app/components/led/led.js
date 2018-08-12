@@ -10,10 +10,9 @@ class Led extends React.PureComponent {
     }
 
     render() {
-        const { led} = this.props;
+        const {led} = this.props;
         return (
             <div className={"ledDiv"}>
-                {console.log("LED led.id: " + led.id)}
                 <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>
@@ -31,8 +30,6 @@ class Led extends React.PureComponent {
             </div>
         );
     }
-
-
 }
 
 export default Led;

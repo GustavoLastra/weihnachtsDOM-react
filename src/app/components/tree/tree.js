@@ -25,22 +25,24 @@ class Tree extends React.Component {
                         onCreate={this.onCreate}
                     />
                 </div>
-                <div className={"treeContainer"} >
-                    { this.state.showTree &&
-                    <MyContext.Consumer>
-                        {(context) => (
-                            <React.Fragment>
-                                <LedList
-                                    ledList={context.state.tree}
-                                />
-                            </React.Fragment>
-                        )}
-                    </MyContext.Consumer>
-                    }
-                    {!this.state.showTree &&
-                    <div className="hint">Please click on the "Create Tree" button</div>
-                    }
-                </div>
+                { this.state.showTree &&
+                    <div className={"treeContainer"} >
+                        <MyContext.Consumer>
+                            {(context) => (
+                                <React.Fragment>
+                                    <LedList
+                                        ledList={context.state.tree}
+                                    />
+                                </React.Fragment>
+                            )}
+                        </MyContext.Consumer>
+                    </div>
+                }
+                {!this.state.showTree &&
+                    <div className="hintContainer">
+                        <div className="hint">Please click on the "Create Tree" button</div>
+                    </div>
+                }
             </div>
         );
     }

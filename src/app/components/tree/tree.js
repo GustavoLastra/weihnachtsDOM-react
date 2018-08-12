@@ -13,8 +13,12 @@ class Tree extends React.Component {
         this.onCreate = this.onCreate.bind(this);
     }
 
-    onCreate() {
-        this.setState({showTree: true })
+    onCreate(todo) {
+        if (todo=="create") {
+            this.setState({showTree: true })
+        } else {
+            this.setState({showTree: false })
+        }
     }
 
     render() {

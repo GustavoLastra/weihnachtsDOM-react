@@ -12,7 +12,6 @@ class Tools extends Component {
     }
 
     onClick(context) {
-        console.log("onClick");
         if(this.state.buttonLabel === "Create Tree") {
             this.setState({buttonLabel: "Destroy Tree"});
             this.props.onCreate("create");

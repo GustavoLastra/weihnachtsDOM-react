@@ -9,12 +9,10 @@ class MyProvider extends Component {
     }
 
     initialTree = () => {
-        console.log("resetTree");
         this.turn("1", false);
     }
 
     turn = (id, newButtonState) => {
-        console.log("id: " + id);
         let temp= this.state.tree;
         let found = false;
         this.scan(temp, id, newButtonState, found)

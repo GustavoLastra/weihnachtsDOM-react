@@ -21,12 +21,12 @@ class MyProvider extends Component {
 
     scan = (obj, id, newButtonState, found) => {
         if (found===true) {
-            obj.map(led =>{
+            obj.forEach(led =>{
                 led.buttonState = newButtonState;
                 this.scan(led.ledList, id, newButtonState, found);
             })
         } else {
-            obj.map(led =>{
+            obj.forEach(led =>{
                 if (led.id === id) {
                     found = true;
                     led.buttonState = newButtonState;

@@ -12,7 +12,7 @@ class Led extends React.PureComponent {
     render() {
         const {led} = this.props;
         return (
-            <div className={"ledDiv"}>
+            <div>
                 <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>

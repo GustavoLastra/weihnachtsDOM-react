@@ -13,6 +13,7 @@ class MyProvider extends Component {
     }
 
     turn = (id, newButtonState) => {
+        console.log(id);
         let temp= this.state.tree;
         let found = false;
         this.scan(temp, id, newButtonState, found)
